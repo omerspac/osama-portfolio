@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Put your custom colors and styles *after* the Tailwind layers */
+/* === Portfolio Dark Gloss Theme === */
+:root {
+  --bg-start: #071024;
+  --bg-end: #071827;
+  --text-primary: #e6eef8;
+  --text-muted: #94a3b8;
+  --accent: #22c55e;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --shadow-glass: rgba(2, 6, 23, 0.6);
+  --radius: 16px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Background & Base Text --- */
+body {
+  background: linear-gradient(180deg, var(--bg-start), var(--bg-end));
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --- Containers & Cards --- */
+.bg-white,
+.bg-gray-50,
+.bg-gray-100 {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px var(--shadow-glass);
+  color: var(--text-primary);
+}
+
+/* --- Text --- */
+.text-gray-900,
+.text-black {
+  color: var(--text-primary) !important;
+}
+
+.text-gray-600,
+.text-gray-500 {
+  color: var(--text-muted) !important;
+}
+
+.font-semibold,
+.font-bold {
+  color: var(--text-primary);
+}
+
+/* --- Accent text & links --- */
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent);
+}
+
+/* --- Buttons --- */
+.bg-black {
+  background: linear-gradient(90deg, #16a34a, var(--accent)) !important;
+  color: #021009 !important;
+  border: none !important;
+  transition: all 0.2s ease;
+}
+.bg-black:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+.border-black {
+  border-color: var(--accent) !important;
+  color: var(--accent);
+}
+.border-black:hover {
+  background: var(--accent);
+  color: #021009 !important;
+}
+
+/* --- Shadows for Images and Sections --- */
+.shadow,
+.shadow-lg {
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.7) !important;
+}
+
+/* --- Cards & Grid Items --- */
+.rounded-2xl,
+.rounded-lg {
+  border-radius: var(--radius);
+}
+
+/* --- Section Spacing --- */
+section,
+header,
+footer {
+  background: transparent;
+}
+
+/* --- Highlight titles --- */
+h1, h2, h3 {
+  color: var(--accent);
+}
+
+/* --- Smooth transitions --- */
+* {
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
