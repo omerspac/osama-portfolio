@@ -27,13 +27,13 @@ export default function InternshipsAndCertificates() {
   const slides = type === "internship" ? internships : certificates;
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-12">
-      <div className="bg-white rounded-2xl p-6 shadow">
-        <h2 className="text-3xl font-bold mb-8">INTERNSHIPS & CERTIFICATIONS</h2>
+    <section className="max-w-6xl mx-auto px-6 py-16">
+      <div className="bg-white rounded-2xl p-6 shadow-lg">
+        <h2 className="text-3xl font-bold">INTERNSHIPS & CERTIFICATIONS</h2>
         <p className="mt-4 text-gray-600 text-[15px] leading-relaxed">
           Showcasing practical experience and verified achievements through professional internships and technical certifications. These reflect my applied learning, hands-on industry exposure, and continued pursuit of excellence across engineering and design disciplines.
         </p>
-
+      <br></br>
         {/* INTERNSHIPS */}
         <div className="mb-10">
           <h3 className="text-xl font-semibold mb-4 text-[#22c55e]">Internships</h3>
