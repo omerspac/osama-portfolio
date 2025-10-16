@@ -22,6 +22,17 @@ import PartsAndPrototyping from "./PartsAndPrototyping";
 import DrawingsSection from "./DrawingsSection";
 import InternshipsAndCertificates from "./InternshipsAndCertificates";
 
+const FadeInWhenVisible = ({ children }: { children: React.ReactNode }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+    viewport={{ once: true, amount: 0.2 }}
+  >
+    {children}
+  </motion.div>
+);
+
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState<number | null>(null);
   const [photoIndex, setPhotoIndex] = useState(0);
@@ -263,8 +274,9 @@ export default function Portfolio() {
         </motion.div>
       </header>
 
-      <section id="about" className="max-w-6xl mx-auto px-6 py-12 space-y-8">
       {/* ABOUT SUMMARY */}
+      <FadeInWhenVisible>
+      <section id="about" className="max-w-6xl mx-auto px-6 py-12 space-y-8">
       <div className="bg-white rounded-2xl p-6 shadow">
         <h2 className="text-2xl font-bold">ABOUT ME</h2>
         <p className="mt-3 text-gray-600">
@@ -341,12 +353,14 @@ export default function Portfolio() {
           manufacturability, precision and standards compliance.
         </p>
       </div>
-    </section>
-
+    </section>  
+    </FadeInWhenVisible>
 
       {/* PROJECTS */}
+
+      <FadeInWhenVisible>
       <section id="projects" className="max-w-6xl mx-auto px-6 py-12">
-      <h2 className="text-3xl font-bold mb-6">PROJECTS</h2>
+      <h2 className="text-3xl font-bold mb-6">FEATURED PROJECTS</h2>
 
       <div className="grid md:grid-cols-2 gap-6">
         {projects.map((p, i) => (
@@ -391,7 +405,7 @@ export default function Portfolio() {
         ))}
       </div>
     </section>
-
+    </FadeInWhenVisible>
 
       {/* ✅ Lightbox popup for project images */}
       {activeProject !== null && (
@@ -468,18 +482,28 @@ export default function Portfolio() {
     </AnimatePresence>
 
      {/* INTERNSHIPS & CERTIFICATES */}
-      <InternshipsAndCertificates />
+      <FadeInWhenVisible>
+        <InternshipsAndCertificates />
+      </FadeInWhenVisible>
 
      {/* 2D DRAWINGS */}
-      <DrawingsSection />
+      <FadeInWhenVisible>
+        <DrawingsSection />
+      </FadeInWhenVisible>
 
       {/* TECHNICAL DOCUMENTATION */}
-      <TechnicalDocumentation />
+      <FadeInWhenVisible>
+        <TechnicalDocumentation />
+      </FadeInWhenVisible>
 
       {/* 3D PARTS & PROTOTYPING */}
-      <PartsAndPrototyping />
+      <FadeInWhenVisible>
+        <PartsAndPrototyping />
+      </FadeInWhenVisible>
 
-    <Footer />
+      <FadeInWhenVisible>
+        <Footer />
+      </FadeInWhenVisible>
     </div>
   );
 }
