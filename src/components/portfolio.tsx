@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import { createPortal } from "react-dom";
+// import { createPortal } from "react-dom";
 
 import { FaRegEye } from "react-icons/fa";
 import { CgArrowLongRight } from "react-icons/cg";
@@ -20,6 +20,7 @@ import TechnicalDocumentation from "./TechnicalDocumentation";
 import Footer from "./footer";
 import PartsAndPrototyping from "./PartsAndPrototyping";
 import DrawingsSection from "./DrawingsSection";
+import InternshipsAndCertificates from "./InternshipsAndCertificates";
 
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState<number | null>(null);
@@ -465,6 +466,9 @@ export default function Portfolio() {
         </motion.div>
       )}
     </AnimatePresence>
+
+     {/* INTERNSHIPS & CERTIFICATES */}
+      <InternshipsAndCertificates />
 
      {/* 2D DRAWINGS */}
       <DrawingsSection />
