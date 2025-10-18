@@ -56,11 +56,6 @@ public/
 - Font Awesome is imported in `page.tsx` via `@fortawesome/fontawesome-free/css/all.min.css`.
 - Additional icons via `react-icons`.
 
-## 🔍 Accessibility & Performance Tips
-- Provide `alt` text for all images in `public/images/`.
-- Prefer optimized image sizes and modern formats where possible.
-- Keep motion preferences in mind (reduce animations for users with reduced motion settings).
-
 ## ☁️ Deployment (Vercel)
 This project is optimized for deployment on Vercel.
 
