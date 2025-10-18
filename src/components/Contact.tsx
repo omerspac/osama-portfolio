@@ -1,7 +1,7 @@
 import { FaBehance, FaLinkedinIn, FaMapMarkerAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-export default function Footer() {
+export default function Contact() {
   return (
     <>
       {/* CONTACT */}
@@ -34,14 +34,14 @@ export default function Footer() {
               download="Muhammad-Osama-CV.pdf"
               className="inline-block bg-black text-white px-5 py-3 rounded-2xl"
             >
-              Download Portfolio PDF
+              Download Resume
             </a>
             <a
               href="/assets/OSAMA-PORTFOLIO-CAD.ppt"
               download="OSAMA-PORTFOLIO-CAD.ppt"
               className="inline-block bg-black text-white px-5 py-3 rounded-2xl"
             >
-              Download Resume
+              Download Presentation
             </a>
           </div>
 

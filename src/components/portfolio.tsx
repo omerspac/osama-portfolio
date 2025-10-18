@@ -17,10 +17,11 @@ import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import TechnicalDocumentation from "./TechnicalDocumentation";
-import Footer from "./footer";
 import PartsAndPrototyping from "./PartsAndPrototyping";
 import DrawingsSection from "./DrawingsSection";
 import InternshipsAndCertificates from "./InternshipsAndCertificates";
+import CadScreenshots from "./CadScreenshots";
+import Contact from "./Contact";
 
 const FadeInWhenVisible = ({ children }: { children: React.ReactNode }) => (
   <motion.div
@@ -254,7 +255,7 @@ export default function Portfolio() {
               download="Muhammad-Osama-CV.pdf"
               className="inline-block border border-black px-5 py-3 rounded-2xl hover:bg-green hover:text-white transition"
             >
-              Download PDF
+              Download CV
             </a>
           </div>
         </div>
@@ -309,7 +310,6 @@ export default function Portfolio() {
         ))}
       </div>
 
-
       {/* SKILLS SECTION */}
       <div className="bg-white rounded-2xl p-6 shadow">
         <h3 className="text-lg font-semibold mb-4 border-b pb-2">Technical Skills</h3>
@@ -344,7 +344,8 @@ export default function Portfolio() {
         </div>
       </div>
 
-  {/* PORTFOLIO STATEMENT */}
+      {/* PORTFOLIO STATEMENT */}
+
       <div className="bg-white rounded-2xl p-6 shadow">
         <h3 className="text-lg font-semibold mb-2">Portfolio Statement</h3>
         <p className="text-gray-600">
@@ -353,8 +354,8 @@ export default function Portfolio() {
           manufacturability, precision and standards compliance.
         </p>
       </div>
-    </section>  
-    </FadeInWhenVisible>
+      </section>  
+      </FadeInWhenVisible>
 
       {/* PROJECTS */}
 
@@ -432,12 +433,10 @@ export default function Portfolio() {
         <motion.div
           key="project-info"
           initial={{ x: 400, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          animate={{ x: minimized ? 320 : 0, opacity: 1 }}
           exit={{ x: 400, opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className={`fixed top-0 right-0 h-full w-full md:w-[400px] bg-black/70 backdrop-blur-xl text-white shadow-2xl z-[999999] overflow-y-auto border-l border-white/10 transition-transform duration-500 ease-in-out ${
-            minimized ? "translate-x-[85%]" : "translate-x-0"
-          }`}
+          className={`fixed top-0 right-0 h-full w-full md:w-[400px] bg-black/70 backdrop-blur-xl text-white shadow-2xl z-[9999999] overflow-y-auto border-l border-white/10`}
         >
           {/* ✅ Toggle Minimize Button */}
           <button
@@ -445,22 +444,24 @@ export default function Portfolio() {
               e.stopPropagation();
               setMinimized((prev) => !prev);
             }}
-            className="absolute top-1/2 -left-8 transform -translate-y-1/2 bg-black/80 hover:bg-black/90 rounded-full p-3 text-green-400 hover:text-green-300 transition-all duration-300 shadow-lg z-[1000000000]"
+            className="absolute top-1/2 -left-8 transform -translate-y-1/2 bg-black/80 hover:bg-black/90 
+                      rounded-full p-3 text-[#22c55e] hover:text-[#4ade80] transition-all duration-300 
+                      shadow-lg z-[10000]"
           >
             <RiArrowDropRightLine
-              className={`text-5xl transform transition-transform duration-300 ${
+              className={`text-5xl transform transition-transform duration-300 cursor-pointer ${
                 minimized ? "rotate-180" : "rotate-0"
               }`}
             />
           </button>
 
-          {/* ✅ Modal content */}
+          {/* ✅ Modal Content */}
           <div
             className={`p-6 transition-opacity duration-300 ${
               minimized ? "opacity-0 pointer-events-none" : "opacity-100"
             }`}
           >
-            <h2 className="text-xl font-bold mb-1 text-green-400">
+            <h2 className="text-xl font-bold mb-1 text-[#22c55e]">
               {projects[activeProject].title}
             </h2>
             <p className="text-sm text-gray-400 mb-4">
@@ -486,10 +487,16 @@ export default function Portfolio() {
         <InternshipsAndCertificates />
       </FadeInWhenVisible>
 
+     {/* 2D CAD SCREENSHOTS */}
+      <FadeInWhenVisible>
+        <CadScreenshots />
+      </FadeInWhenVisible>
+
      {/* 2D DRAWINGS */}
       <FadeInWhenVisible>
         <DrawingsSection />
       </FadeInWhenVisible>
+      
 
       {/* TECHNICAL DOCUMENTATION */}
       <FadeInWhenVisible>
@@ -502,7 +509,7 @@ export default function Portfolio() {
       </FadeInWhenVisible>
 
       <FadeInWhenVisible>
-        <Footer />
+        <Contact />
       </FadeInWhenVisible>
     </div>
   );

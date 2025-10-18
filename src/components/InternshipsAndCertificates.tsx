@@ -27,7 +27,7 @@ export default function InternshipsAndCertificates() {
   const slides = type === "internship" ? internships : certificates;
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16">
+    <section id="certifications" className="max-w-6xl mx-auto px-6 py-16">
       <div className="bg-white rounded-2xl p-6 shadow-lg">
         <h2 className="text-3xl font-bold">INTERNSHIPS & CERTIFICATIONS</h2>
         <p className="mt-4 text-gray-600 text-[15px] leading-relaxed">
