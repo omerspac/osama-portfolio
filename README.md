@@ -28,12 +28,14 @@ src/
   components/
     navbar.tsx        # Top navigation bar
     portfolio.tsx     # Main portfolio sections aggregator
+    InternshipsAndCertificates.tsx
+    CadScreenshots.tsx
     DrawingsSection.tsx
-    PartsAndPrototyping.tsx
     TechnicalDocumentation.tsx
+    PartsAndPrototyping.tsx
     ScrollProgressBar.tsx
     ScrollToTop.js
-    footer.tsx
+    Contact.tsx
 public/
   assets/             # CV and presentation files
   images/             # Portfolio images and thumbnails
@@ -58,7 +60,6 @@ public/
 
 ## ☁️ Deployment (Vercel)
 This project is optimized for deployment on Vercel.
-
 
 ## 📄 License
 This repository is for personal portfolio use. If you intend to reuse parts of the code or assets, please provide attribution and ensure you have rights to the images and documents included.
