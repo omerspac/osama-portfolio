@@ -126,7 +126,7 @@ export default function Portfolio() {
                   alt="SolidWorks"
                   className="h-20"
                 />
-                <p className="mt-2 text-md font-bold text-gray-600">SolidWorks</p>
+                <p className="mt-2 text-md font-bold text-gray-600">SolidWorks Certified (CSWA)</p>
               </div>
 
               {/* Creo Parametric */}
