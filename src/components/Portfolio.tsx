@@ -124,9 +124,9 @@ export default function Portfolio() {
                 <img
                   src="/images/icons/solidworks-logo.png"
                   alt="SolidWorks"
-                  className="h-20"
+                  className="h-20 mt-5" // temporary margin for better vertical alignment
                 />
-                <p className="mt-2 text-md font-bold text-gray-600">SolidWorks</p>
+                <p className="mt-2 text-md font-bold text-gray-600 text-center">SolidWorks <br/>(Certified CSWA)</p>
               </div>
 
               {/* Creo Parametric */}
