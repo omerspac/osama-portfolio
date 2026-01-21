@@ -25,6 +25,7 @@ export default function InternshipsAndCertificates() {
     { src: "/images/certificates/cert1.png" },
     { src: "/images/certificates/cert2.png" },
     { src: "/images/certificates/cert3.png" },
+    { src: "/images/certificates/cert4.png" },
   ];
 
   const licenses = [
@@ -58,29 +59,29 @@ export default function InternshipsAndCertificates() {
             Work Experience & Internships
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 justify-center">
-  {internships.map((img, i) => (
-    <div
-      key={i}
-      className={`relative aspect-square overflow-hidden rounded-lg shadow group cursor-pointer 
-        ${i === 4 ? "col-span-2 md:col-span-1" : ""}`}
-      onClick={() => {
-        setType("internship");
-        setIndex(i);
-        setOpen(true);
-      }}
-    >
-      <img
-        src={img.src}
-        alt={`Internship ${i + 1}`}
-        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-      />
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
-        <FaRegEye className="text-4xl mb-2 animate-fade-in" />
-        <CgArrowLongRight className="text-2xl transform -translate-x-6 opacity-0 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100" />
-      </div>
-    </div>
-  ))}
-</div>
+          {internships.map((img, i) => (
+            <div
+              key={i}
+              className={`relative aspect-square overflow-hidden rounded-lg shadow group cursor-pointer 
+                ${i === 4 ? "col-span-2 md:col-span-1" : ""}`}
+              onClick={() => {
+                setType("internship");
+                setIndex(i);
+                setOpen(true);
+              }}
+            >
+              <img
+                src={img.src}
+                alt={`Internship ${i + 1}`}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                <FaRegEye className="text-4xl mb-2 animate-fade-in" />
+                <CgArrowLongRight className="text-2xl transform -translate-x-6 opacity-0 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100" />
+              </div>
+            </div>
+          ))}
+        </div>
 
         </div>
         <hr className="my-8" />
@@ -90,11 +91,12 @@ export default function InternshipsAndCertificates() {
           <h3 className="text-xl font-semibold mb-4 text-[#22c55e]">
             Degree & Certificates
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 justify-center">
             {certificates.map((img, i) => (
               <div
                 key={i}
-                className="relative aspect-square overflow-hidden rounded-lg shadow group cursor-pointer"
+                className={`relative aspect-square overflow-hidden rounded-lg shadow group cursor-pointer
+                ${i === 4 ? "col-span-2 md:col-span-1" : ""}`}
                 onClick={() => {
                   setType("certificate");
                   setIndex(i);
@@ -115,6 +117,7 @@ export default function InternshipsAndCertificates() {
           </div>
         </div>
         <hr className="my-8" />
+
         {/* 🆕 ADDITIONAL LICENSES & CERTIFICATES */}
         <div>
           <h3 className="text-xl font-semibold mb-4 text-[#22c55e]">
