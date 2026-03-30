@@ -122,24 +122,24 @@ const projects: Project[] = [
       "Ergonomic field layout for UAV operation",
     ],
   },
-  {
-    title: "Fixed-Wing VTOL",
-    subtitle: "Hybrid vertical takeoff and forward-flight UAV",
-    description:
-      "Engineered and modelled CAD including internal structure and outer body. This also includes avionics placements. It is a fixed-wing hybrid UAV designed for stable vertical-to-horizontal flight transition.",
-    details:
-      "The aircraft combines VTOL and fixed-wing performance for maximum endurance and stability. It incorporates foldable wings and tilt motor mechanisms, enhancing aerodynamic efficiency and mission range.",
-    images: [
-      "/images/Picture12-Replacement.jpg",
-      "/images/Picture12.jpg",
-      "/images/Picture13.jpg",
-    ],
-    bullets: [
-      "Tilt-motor and foldable wing integration",
-      "Optimized aerodynamic profile",
-      "Lightweight composite structure",
-    ],
-  },
+  // {
+  //   title: "Fixed-Wing VTOL",
+  //   subtitle: "Hybrid vertical takeoff and forward-flight UAV",
+  //   description:
+  //     "Engineered and modelled CAD including internal structure and outer body. This also includes avionics placements. It is a fixed-wing hybrid UAV designed for stable vertical-to-horizontal flight transition.",
+  //   details:
+  //     "The aircraft combines VTOL and fixed-wing performance for maximum endurance and stability. It incorporates foldable wings and tilt motor mechanisms, enhancing aerodynamic efficiency and mission range.",
+  //   images: [
+  //     "/images/Picture12-Replacement.jpg",
+  //     "/images/Picture12.jpg",
+  //     "/images/Picture13.jpg",
+  //   ],
+  //   bullets: [
+  //     "Tilt-motor and foldable wing integration",
+  //     "Optimized aerodynamic profile",
+  //     "Lightweight composite structure",
+  //   ],
+  // },
   {
     title: "Loiter Munition UAVs",
     subtitle: "Compact fixed-wing UAVs for long endurance missions",
@@ -318,7 +318,7 @@ export default function Projects() {
                   whileHover={{ translateY: -6 }}
                   onClick={() => openProject(i)}
                   className={`relative bg-white rounded-2xl p-4 shadow hover:shadow-lg transition group overflow-hidden cursor-pointer ${
-                    p.title === "Payload Mechanism" ? "md:col-span-2" : ""
+                    p.title === "Payload Mechanism" ? "md:col-span-1" : ""
                   }`}
                 >
                   <div className="flex gap-4 transition-all duration-300 group-hover:blur-sm">
