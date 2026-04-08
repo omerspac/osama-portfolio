@@ -141,7 +141,7 @@ const projects: Project[] = [
   //   ],
   // },
   {
-    title: "Loiter Munition UAVs",
+    title: "Foldable UAVs",
     subtitle: "Compact fixed-wing UAVs for long endurance missions",
     description:
       "Designed and drafted UAVs specialized for VTOL and loitering munitions operations, including installation planning and fabrication.",
